@@ -12,6 +12,7 @@ class ArticlesDetailsViewController: UIViewController {
     
     var viewModel: ArticlesViewModel?
     
+    @IBOutlet weak var imageDescription: UIImageView!
 
     @IBOutlet weak var textViewDescription: UITextView!
     
@@ -19,6 +20,8 @@ class ArticlesDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         self.textViewDescription.text = self.viewModel?.descriptionDetail
+        self.imageDescription.image = self.viewModel?.imageURLDetail
+
 
         // Do any additional setup after loading the view.
     }

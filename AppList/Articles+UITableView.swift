@@ -29,22 +29,18 @@ extension ArticlesViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! MyTableViewCell
         
         // Configure the cell...
         
         self.viewModel?.loadCurrentArticle(indice: indexPath.row)
         
-        cell.textLabel?.text = self.viewModel?.title
+       
+                
+        cell.updateLayoutCell(title: (self.viewModel?.title)!, author: (self.viewModel?.author)!, image: (self.viewModel?.imageURL)!)
         
+    
         return cell
-    }
-    
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        return "Articles"
-        
     }
     
     

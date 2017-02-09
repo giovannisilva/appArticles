@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ArticlesViewModel: NSObject {
     
@@ -39,6 +40,28 @@ class ArticlesViewModel: NSObject {
         self.currentDetailsArticle = self.articlesArray?[indice]
     }
     
+    var imageURL : UIImage? {
+        
+        if let url = URL(string: (self.currentArticle?.urlToImage)!) {
+            if let data = NSData(contentsOf: url) {
+                return UIImage(data: data as Data)!
+        
+            }
+        }
+        return nil
+    }
+    
+    var imageURLDetail : UIImage? {
+        
+        if let url = URL(string: (self.currentDetailsArticle?.urlToImage)!) {
+            if let data = NSData(contentsOf: url) {
+                return UIImage(data: data as Data)!
+                
+            }
+        }
+        return nil
+    }
+
     
     
     var descriptionDetail: String? {
@@ -59,7 +82,7 @@ class ArticlesViewModel: NSObject {
     var descriptionValue: String {
         guard let loadLescriptionValue = self.currentArticle?.descriptionValue else{return ""}
         return loadLescriptionValue
-    }
+        }
 
     var publishedAt: String {
         guard let loadPublishedAt = self.currentArticle?.publishedAt else{return ""}
