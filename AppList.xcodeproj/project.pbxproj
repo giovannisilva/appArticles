@@ -32,6 +32,9 @@
 		02A907581E43DE100073917C /* ArticlesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A907571E43DE100073917C /* ArticlesRouter.swift */; };
 		02A9075A1E43F0B10073917C /* ArticlesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A907591E43F0B10073917C /* ArticlesStore.swift */; };
 		02A9075C1E43F54F0073917C /* ArticlesApiStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9075B1E43F54F0073917C /* ArticlesApiStore.swift */; };
+		02AC5E461E5266EC0047AC65 /* article+circleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC5E451E5266EC0047AC65 /* article+circleMenu.swift */; };
+		02AC5E4A1E5281AD0047AC65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC5E491E5281AD0047AC65 /* LoginViewController.swift */; };
+		02AC5E4D1E5286170047AC65 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC5E4C1E5286170047AC65 /* MenuViewController.swift */; };
 		02B662FD1E3ABA7D009D2700 /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B662FC1E3ABA7D009D2700 /* ArticlesViewModel.swift */; };
 		0F6495C5276466E83CC94FAC /* Pods_AppList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB2EE354BD586B291FE3858 /* Pods_AppList.framework */; };
 		3A6A767B1E46490F00171748 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A767A1E46490F00171748 /* API.swift */; };
@@ -86,6 +89,9 @@
 		02A907571E43DE100073917C /* ArticlesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesRouter.swift; sourceTree = "<group>"; };
 		02A907591E43F0B10073917C /* ArticlesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesStore.swift; sourceTree = "<group>"; };
 		02A9075B1E43F54F0073917C /* ArticlesApiStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesApiStore.swift; sourceTree = "<group>"; };
+		02AC5E451E5266EC0047AC65 /* article+circleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "article+circleMenu.swift"; sourceTree = "<group>"; };
+		02AC5E491E5281AD0047AC65 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		02AC5E4C1E5286170047AC65 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		02B662FC1E3ABA7D009D2700 /* ArticlesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
 		3A6A767A1E46490F00171748 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4B6E29C57E5E2FE96259C48D /* Pods-AppList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppList.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppList/Pods-AppList.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +152,9 @@
 		023C9C9D1E37FF61006D036F /* AppList */ = {
 			isa = PBXGroup;
 			children = (
+				02AC5E4B1E5285EB0047AC65 /* Menu */,
+				02AC5E481E527C390047AC65 /* Login */,
+				02AC5E471E527BCF0047AC65 /* ArticlesViewController */,
 				02A907531E43DDA70073917C /* Network */,
 				02A907501E4154090073917C /* Helpers */,
 				02A907431E413A160073917C /* DataProvider */,
@@ -153,12 +162,7 @@
 				028FB4D41E3AAF26006550A0 /* Models */,
 				023C9C9E1E37FF61006D036F /* AppDelegate.swift */,
 				02A9074E1E414D4C0073917C /* LoadingViewController.swift */,
-				0262F7981E4A8A7A001DDD42 /* ArticlesDetailsViewController.swift */,
-				023C9CA01E37FF61006D036F /* ArticlesViewController.swift */,
-				0262F7961E4A82B6001DDD42 /* Articles+ArticlesDataProviderProtocol.swift */,
-				0262F7941E4A810A001DDD42 /* Articles+UITableView.swift */,
 				023C9CA21E37FF61006D036F /* Main.storyboard */,
-				0250FBDB1E4D1578009ABE7C /* MyTableViewCell.swift */,
 				023C9CA51E37FF61006D036F /* Assets.xcassets */,
 				02A9074C1E414D0E0073917C /* image2.png */,
 				023C9CA71E37FF61006D036F /* LaunchScreen.storyboard */,
@@ -245,6 +249,35 @@
 				02A9075B1E43F54F0073917C /* ArticlesApiStore.swift */,
 			);
 			name = Store;
+			sourceTree = "<group>";
+		};
+		02AC5E471E527BCF0047AC65 /* ArticlesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0262F7981E4A8A7A001DDD42 /* ArticlesDetailsViewController.swift */,
+				023C9CA01E37FF61006D036F /* ArticlesViewController.swift */,
+				0262F7961E4A82B6001DDD42 /* Articles+ArticlesDataProviderProtocol.swift */,
+				0262F7941E4A810A001DDD42 /* Articles+UITableView.swift */,
+				0250FBDB1E4D1578009ABE7C /* MyTableViewCell.swift */,
+			);
+			name = ArticlesViewController;
+			sourceTree = "<group>";
+		};
+		02AC5E481E527C390047AC65 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				02AC5E491E5281AD0047AC65 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		02AC5E4B1E5285EB0047AC65 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				02AC5E4C1E5286170047AC65 /* MenuViewController.swift */,
+				02AC5E451E5266EC0047AC65 /* article+circleMenu.swift */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		02B662FB1E3ABA6A009D2700 /* ViewModel */ = {
@@ -461,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02AC5E4A1E5281AD0047AC65 /* LoginViewController.swift in Sources */,
 				0250FBDC1E4D1578009ABE7C /* MyTableViewCell.swift in Sources */,
 				023C9CA11E37FF61006D036F /* ArticlesViewController.swift in Sources */,
 				02A9075A1E43F0B10073917C /* ArticlesStore.swift in Sources */,
@@ -470,10 +504,12 @@
 				3A6A767B1E46490F00171748 /* API.swift in Sources */,
 				02A907581E43DE100073917C /* ArticlesRouter.swift in Sources */,
 				02A9075C1E43F54F0073917C /* ArticlesApiStore.swift in Sources */,
+				02AC5E461E5266EC0047AC65 /* article+circleMenu.swift in Sources */,
 				02A907521E4154230073917C /* LoadingView.swift in Sources */,
 				0262F7951E4A810A001DDD42 /* Articles+UITableView.swift in Sources */,
 				02A907491E4148C20073917C /* AccountViewModel.swift in Sources */,
 				023C9C9F1E37FF61006D036F /* AppDelegate.swift in Sources */,
+				02AC5E4D1E5286170047AC65 /* MenuViewController.swift in Sources */,
 				02B662FD1E3ABA7D009D2700 /* ArticlesViewModel.swift in Sources */,
 				028FB4D81E3AAF56006550A0 /* Account.swift in Sources */,
 				02A9074F1E414D4C0073917C /* LoadingViewController.swift in Sources */,
