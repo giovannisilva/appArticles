@@ -47,7 +47,47 @@ extension MenuViewController: CircleMenuDelegate {
         
             performSegue(withIdentifier: "menuToNavigator", sender: atIndex)
         }
+        
+        if atIndex == 0{
+            
+            self.tappedShowCamera()
+        }
+
+        
+        
+        
     }
+    
+    func tappedShowCamera() {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
+            
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+            
+            
+        }
+        
+        
+        
+    }
+
     
     
 }
+
+
+extension MenuViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+    
+}
+
+
+
+
+
+
