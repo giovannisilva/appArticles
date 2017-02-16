@@ -21,17 +21,6 @@ extension LoginViewController: LoginDataProviderProtocol {
         
         print("falhou")
         
-        let alertComum : UIAlertController = UIAlertController(title: "Alerta", message: "Email ou senha incorretos", preferredStyle: UIAlertControllerStyle.alert)
-        
-        let acaoOk : UIAlertAction = UIAlertAction(title: "OK", style: .default) { (acao) in
-            
-            print("Clicou OK")
-        }
-        
-        alertComum.addAction(acaoOk)
-        
-        self.present(alertComum, animated: true, completion: nil)
-        
     }
     
 }
